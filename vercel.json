@@ -1,5 +1,10 @@
 {
-  "redirects": [
-    { "source": "/:path((?!^$).*)", "destination": "/", "permanent": true }
+  "routes": [
+    { "handle": "filesystem" },
+    {
+      "src": "/(.+)",
+      "status": 307,
+      "headers": { "Location": "/" }
+    }
   ]
 }
