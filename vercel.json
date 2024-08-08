@@ -2,9 +2,14 @@
   "routes": [
     { "handle": "filesystem" },
     {
+      "src": "/",
+      "status": 307,
+      "headers": { "Location": "https://firstquadrant.ai/?utm_source=pabio.com" }
+    },
+    {
       "src": "/(.+)",
       "status": 307,
-      "headers": { "Location": "/" }
+      "headers": { "Location": "https://firstquadrant.ai/?utm_source=pabio.com" }
     }
   ]
 }
